@@ -18,6 +18,15 @@ public class Calculator
 	
 	public int divide(int a, int b) 
 	{
-		return a / b;
+		if (b != 0) 
+		{
+			// check to make sure denominator is not zero
+			// For decimal result, digits after decimal point is truncated
+			return a / b;
+		}
+		else {
+			// throw IllegalArgumentException with specific message
+			throw new IllegalArgumentException("Division by zero is not allowed.");
+		}
 	}
 }
